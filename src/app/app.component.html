@@ -1,0 +1,65 @@
+<div>
+    <input id="file-input" type='file' (change)="readUrl($event)">
+    </div>
+    <div>
+        <img src="{{url}}" >
+        <!-- <img src="{{url}}" height="75" width="145"> -->
+    </div>
+<h1>{{title}}</h1>
+<h2>{{message}}</h2>
+<ul>
+<div *ngIf="visible">
+<app-heroes></app-heroes>
+</div>
+<button (click)="toggleUl()">Toggle</button>
+</ul>
+
+<!-- <ckeditor
+  [(ngModel)]="ckeditorContent">
+   
+</ckeditor> -->
+<div><span>CKEDITOR Content: </span><span [innerHTML]="editorValue"></span></div>
+<ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" [config]="removeButton" lang="en"  [fullPage]="true"></ck-editor>
+<!-- <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" [config]="{removeButtons : 'Save,Source,Templates,Undo,Cut,Find,SelectAll,Scayt,Form,Checkbox,Radio,Textarea,Select,Strike,Subscript,Superscript,CopyFormatting,Outdent,Blockquote,JustifyLeft,JustifyCenter,CreateDiv,Indent,BidiRtl,JustifyRight,JustifyBlock,Anchor,Language,BidiLtr,Link,Image,Flash,Table,HorizontalRule,Smiley,SpecialChar,PageBreak,Iframe,Styles,TextColor,Maximize,About,ShowBlocks,Format,Font,FontSize,NewPage,RemoveFormat,BulletedList,NumberedList,Italic,Underline,Button,ImageButton,HiddenField'}" lang="en"  [fullPage]="true"></ck-editor> -->
+<!-- <ck-editor name="editor1" [(ngModel)]="editorValue" skin="moono-lisa" [config]="{removeButtons : 'Underline,JustifyCenter'}" lang="en"  [fullPage]="true"></ck-editor> -->
+<!-- <ckeditor [(ngModel)]="myContent" debounce="500"></ckeditor> -->
+<!-- <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+</div> -->
+<!-- <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" 
+        multiple="multiple" accept="image/*" maxFileSize="1000000">
+    <ng-template pTemplate="content">
+        <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+    </ng-template>        
+</p-fileUpload> -->
+<div>
+    <!-- <div class="wrapper">
+        <div class="container" [dragula]='"bag-task1"' [dragulaOptions]="options">
+            <div>Task1</div>
+            <div>Task2</div>
+            <div>Task3</div>
+        </div>
+        <div class="container" [dragula]='"bag-task2"' [dragulaOptions]="options">
+            <div>Task4</div>
+            <div>Task5</div>
+            <div>Task6</div>
+        </div>
+    </div> -->
+    <div class="wrapper">
+            <div class="container" [dragula]='"bag-task1"' >
+                <div>Task1</div>
+                <div>Task2</div>
+                <div>Task3</div>
+            </div>
+            <!-- <div class="container" [dragula]='"bag-task2"' >
+                <div>Task4</div>
+                <div>Task5</div>
+                <div>Task6</div>
+            </div> -->
+        </div>
+</div>
